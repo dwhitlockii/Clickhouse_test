@@ -25,6 +25,12 @@ jobs:
             docker exec ch-node1 clickhouse-client --user=admin --password=admin_strong_password --query "SELECT 1" && break
             sleep 5
           done
+      - name: Make load script executable
+        run: chmod +x ./scripts/dev-load.sh
+
+      - name: Run load script
+        run: ./scripts/dev-load.sh
+
       - name: Load data
         run: ./scripts/dev-load.sh
       - name: Run validation query
