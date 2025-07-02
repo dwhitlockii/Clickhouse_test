@@ -47,13 +47,16 @@ jobs:
             --user=admin --password=admin_strong_password \
             --multiquery < /tmp/01_create_tables.sql"
 
-      - name: Copy CSV files into each node
+      - name: Copy CSV files to each node
         run: |
           for NODE in ch-node1 ch-node2 ch-node3; do
             docker cp ./data/user_activity.csv $NODE:/tmp/user_activity.csv
             docker cp ./data/sales_orders.csv $NODE:/tmp/sales_orders.csv
             docker cp ./data/system_logs.csv $NODE:/tmp/system_logs.csv
           done
+
+      - name: Make dev-load.sh executable
+        run: chmod +x ./scripts/dev-load.sh
 
       - name: Run data load script
         run: ./scripts/dev-load.sh
