@@ -12,28 +12,48 @@ jobs:
     services:
       docker:
         image: docker:20.10.7-dind
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Set up Docker Compose
         run: sudo apt-get update && sudo apt-get install -y docker-compose
+
       - name: Spin up cluster
         run: docker-compose up -d
+
       - name: Wait for ClickHouse
         run: |
           for i in {1..30}; do
-            docker exec ch-node1 clickhouse-client --user=admin --password=admin_strong_password --query "SELECT 1" && break
+            echo "⏳ Waiting for ClickHouse..."
+            if docker exec ch-node1 clickhouse-client \
+              --user=admin --password=admin_strong_password \
+              --query "SELECT 1"; then
+              echo "✅ ClickHouse is ready!"
+              exit 0
+            fi
             sleep 5
           done
-      - name: Make load script executable
-        run: chmod +x ./scripts/dev-load.sh
+          echo "❌ ClickHouse did not become ready in time."
+          exit 1
 
-      - name: Run load script
-        run: ./scripts/dev-load.sh
+      - name: Create tables (local dev version)
+        run: |
+          docker exec -i ch-node1 clickhouse-client \
+            --user=admin --password=admin_strong_password \
+            < ./scripts/01_create_tables_local.sql
 
       - name: Load data
-        run: ./scripts/dev-load.sh
-      - name: Run validation query
-        run: docker exec ch-node1 clickhouse-client --user=admin --password=admin_strong_password --query "SELECT count(*) FROM default.user_activity"
+        run: |
+          chmod +x ./scripts/dev-load.sh
+          ./scripts/dev-load.sh
+
+      - name: Validate user_activity data
+        run: |
+          docker exec ch-node1 clickhouse-client \
+            --user=admin --password=admin_strong_password \
+            --query "SELECT count(*) FROM default.user_activity_local"
+
       - name: Tear down
-        run: docker-compose down -v 
+        run: docker-compose down -v
