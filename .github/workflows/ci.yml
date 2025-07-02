@@ -23,10 +23,10 @@ jobs:
       - name: Spin up cluster
         run: docker-compose up -d
 
-      - name: Wait for ClickHouse
+      - name: Wait for ClickHouse to be ready
         run: |
           for i in {1..30}; do
-            echo "⏳ Waiting for ClickHouse to be ready..."
+            echo "⏳ Waiting for ClickHouse..."
             if docker exec ch-node1 clickhouse-client \
               --user=admin --password=admin_strong_password \
               --query "SELECT 1"; then
@@ -38,14 +38,14 @@ jobs:
           echo "❌ ClickHouse did not become ready in time."
           exit 1
 
-      - name: Copy schema file into container
+      - name: Copy schema SQL into container
         run: docker cp ./init/01_create_tables.sql ch-node1:/tmp/01_create_tables.sql
 
-      - name: Create tables
+      - name: Create schema tables
         run: |
-          docker exec ch-node1 clickhouse-client \
+          docker exec ch-node1 bash -c "clickhouse-client \
             --user=admin --password=admin_strong_password \
-            --multiquery < /tmp/01_create_tables.sql
+            --multiquery < /tmp/01_create_tables.sql"
 
       - name: Make data load script executable
         run: chmod +x ./scripts/dev-load.sh
@@ -53,11 +53,11 @@ jobs:
       - name: Run data load script
         run: ./scripts/dev-load.sh
 
-      - name: Validate user_activity data
+      - name: Validate user_activity row count
         run: |
           docker exec ch-node1 clickhouse-client \
             --user=admin --password=admin_strong_password \
-            --query "SELECT count(*) FROM default.user_activity_local"
+            --query 'SELECT count(*) FROM default.user_activity_local'
 
-      - name: Tear down
+      - name: Tear down cluster
         run: docker-compose down -v
