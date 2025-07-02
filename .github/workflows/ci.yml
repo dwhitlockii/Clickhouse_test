@@ -38,6 +38,17 @@ jobs:
           echo "❌ ClickHouse did not become ready in time."
           exit 1
 
+      - name: Confirm all nodes are running
+        run: |
+          for NODE in ch-node1 ch-node2 ch-node3; do
+            echo "🔍 Checking $NODE status..."
+            if ! docker inspect -f '{{.State.Running}}' $NODE | grep true; then
+              echo "❌ $NODE is not running!"
+              docker logs $NODE || true
+              exit 1
+            fi
+          done
+
       - name: Copy schema SQL into container
         run: docker cp ./init/01_create_tables.sql ch-node1:/tmp/01_create_tables.sql
 
@@ -47,12 +58,12 @@ jobs:
             --user=admin --password=admin_strong_password \
             --multiquery < /tmp/01_create_tables.sql"
 
-      - name: Copy CSV files to each node
+      - name: Copy CSVs into each node
         run: |
           for NODE in ch-node1 ch-node2 ch-node3; do
-            docker cp ./data/user_activity.csv $NODE:/tmp/user_activity.csv
-            docker cp ./data/sales_orders.csv $NODE:/tmp/sales_orders.csv
-            docker cp ./data/system_logs.csv $NODE:/tmp/system_logs.csv
+            for FILE in user_activity sales_orders system_logs; do
+              docker cp ./data/${FILE}.csv $NODE:/tmp/${FILE}.csv || echo "⚠️ Missing ./data/${FILE}.csv"
+            done
           done
 
       - name: Make dev-load.sh executable
@@ -61,11 +72,17 @@ jobs:
       - name: Run data load script
         run: ./scripts/dev-load.sh
 
-      - name: Validate user_activity row count
+      - name: Validate data in ch-node1
         run: |
           docker exec ch-node1 clickhouse-client \
             --user=admin --password=admin_strong_password \
-            --query 'SELECT count(*) FROM default.user_activity_local'
+            --query "SELECT 'user_activity:', count(*) FROM default.user_activity_local"
+          docker exec ch-node1 clickhouse-client \
+            --user=admin --password=admin_strong_password \
+            --query "SELECT 'sales_orders:', count(*) FROM default.sales_orders_local"
+          docker exec ch-node1 clickhouse-client \
+            --user=admin --password=admin_strong_password \
+            --query "SELECT 'system_logs:', count(*) FROM default.system_logs_local"
 
       - name: Tear down cluster
         run: docker-compose down -v
