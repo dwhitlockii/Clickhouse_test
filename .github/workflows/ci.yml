@@ -39,13 +39,13 @@ jobs:
           exit 1
 
       - name: Copy schema file into container
-        run: docker cp ./init/01_create_tables_local.sql ch-node1:/tmp/01_create_tables_local.sql
+        run: docker cp ./init/01_create_tables.sql ch-node1:/tmp/01_create_tables.sql
 
       - name: Create tables
         run: |
           docker exec ch-node1 clickhouse-client \
             --user=admin --password=admin_strong_password \
-            --multiquery < /tmp/01_create_tables_local.sql
+            --multiquery < /tmp/01_create_tables.sql
 
       - name: Make data load script executable
         run: chmod +x ./scripts/dev-load.sh
