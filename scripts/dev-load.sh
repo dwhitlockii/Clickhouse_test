@@ -1,30 +1,26 @@
 #!/bin/bash
-# dev-load.sh: Load all CSV data into ClickHouse cluster
+# dev-load.sh: Load CSVs into all active ClickHouse nodes
 
 set -e
 
-# Load user_activity
 for NODE in ch-node1 ch-node2 ch-node3; do
-  echo "[dev-load] Loading user_activity.csv into $NODE..."
-  docker exec $NODE bash -c "clickhouse-client \
-    --user=admin --password=admin_strong_password \
-    --query 'INSERT INTO default.user_activity_local FORMAT CSVWithNames' < /tmp/user_activity.csv"
-done
+  if docker inspect -f '{{.State.Running}}' $NODE | grep true; then
+    echo "[dev-load] 🚀 Loading CSVs into $NODE..."
 
-# Load sales_orders
-for NODE in ch-node1 ch-node2 ch-node3; do
-  echo "[dev-load] Loading sales_orders.csv into $NODE..."
-  docker exec $NODE bash -c "clickhouse-client \
-    --user=admin --password=admin_strong_password \
-    --query 'INSERT INTO default.sales_orders_local FORMAT CSVWithNames' < /tmp/sales_orders.csv"
-done
+    docker exec $NODE bash -c "clickhouse-client \
+      --user=admin --password=admin_strong_password \
+      --query 'INSERT INTO default.user_activity_local FORMAT CSVWithNames' < /tmp/user_activity.csv"
 
-# Load system_logs
-for NODE in ch-node1 ch-node2 ch-node3; do
-  echo "[dev-load] Loading system_logs.csv into $NODE..."
-  docker exec $NODE bash -c "clickhouse-client \
-    --user=admin --password=admin_strong_password \
-    --query 'INSERT INTO default.system_logs_local FORMAT CSVWithNames' < /tmp/system_logs.csv"
+    docker exec $NODE bash -c "clickhouse-client \
+      --user=admin --password=admin_strong_password \
+      --query 'INSERT INTO default.sales_orders_local FORMAT CSVWithNames' < /tmp/sales_orders.csv"
+
+    docker exec $NODE bash -c "clickhouse-client \
+      --user=admin --password=admin_strong_password \
+      --query 'INSERT INTO default.system_logs_local FORMAT CSVWithNames' < /tmp/system_logs.csv"
+  else
+    echo "[dev-load] ⚠️ Skipping $NODE (not running)"
+  fi
 done
 
 echo "[dev-load] ✅ Data load complete."
