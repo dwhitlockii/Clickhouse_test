@@ -1,0 +1,5 @@
+apiVersion: 1
+
+preferences:
+  orgId: 1
+  homeDashboardUID: clickhouse-overview 

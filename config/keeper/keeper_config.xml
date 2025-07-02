@@ -1,0 +1,57 @@
+<!--
+######################################################################
+# ClickHouse Keeper Standalone Configuration File
+#
+# This file configures ClickHouse Keeper (ZooKeeper replacement) for
+# production-grade distributed coordination in a ClickHouse cluster.
+#
+# Sections:
+#   1. Network and Ports
+#   2. Logging
+#   3. Coordination and Snapshots
+#   4. Security and Limits
+#   5. Observability
+######################################################################
+-->
+<clickhouse>
+    <!-- ✅ This applies globally -->
+    <listen_host>0.0.0.0</listen_host>
+
+    <!-- 1. Network and Ports -->
+    <keeper_server>
+        <tcp_port>2181</tcp_port> <!-- Standard ZooKeeper port for compatibility -->
+        <server_id>1</server_id> <!-- Standalone mode: single server -->
+        <log_storage_path>/var/lib/clickhouse/coordination/logs</log_storage_path>
+        <snapshot_storage_path>/var/lib/clickhouse/coordination/snapshots</snapshot_storage_path>
+        <raft_configuration>
+            <server>
+                <id>1</id>
+                <hostname>keeper</hostname>
+                <port>9234</port>
+            </server>
+        </raft_configuration>
+        <coordination_settings>
+            <operation_timeout_ms>10000</operation_timeout_ms>
+            <session_timeout_ms>100000</session_timeout_ms>
+        </coordination_settings>
+    </keeper_server>
+
+    <!-- 2. Logging -->
+    <logger>
+        <level>information</level>
+        <log>/var/log/clickhouse-keeper/keeper.log</log>
+        <errorlog>/var/log/clickhouse-keeper/keeper_error.log</errorlog>
+        <console>true</console>
+    </logger>
+
+    <!-- 4. Security and Limits -->
+    <max_connections>4096</max_connections>
+    <max_sessions>4096</max_sessions>
+
+    <!-- 5. Observability -->
+    <prometheus>
+        <endpoint>/metrics</endpoint>
+        <port>9363</port>
+        <listen_host>0.0.0.0</listen_host>
+    </prometheus>
+</clickhouse>

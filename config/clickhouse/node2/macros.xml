@@ -1,0 +1,10 @@
+<!--
+  ClickHouse macros.xml for node2
+-->
+<yandex>
+    <macros>
+        <replica>node2</replica>
+        <shard>1</shard>
+        <cluster>test_cluster</cluster>
+    </macros>
+</yandex> 

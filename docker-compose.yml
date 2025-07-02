@@ -1,0 +1,179 @@
+# =============================
+# ClickHouse Dev Battlestation
+# =============================
+#
+# 3-node ClickHouse cluster with Keeper, Grafana, Kafka
+# All configs/data/init scripts are mounted from ./config, ./data, ./init
+# Named volumes for persistence, custom network for hostname resolution
+#
+# Define networks at the bottom
+networks:
+  clickhouse-net:
+    driver: bridge
+
+services:
+  clickhouse-keeper:
+    image: clickhouse/clickhouse-keeper:latest
+    container_name: keeper
+    restart: unless-stopped
+    volumes:
+      - ./config/keeper/keeper_config.xml:/etc/clickhouse-keeper/keeper_config.xml:ro
+      - ./data/keeper:/var/lib/clickhouse-keeper
+      - ./logs/keeper:/var/log/clickhouse-keeper
+    ports:
+      - "2181:2181" # Expose ZooKeeper-compatible port
+      - "9363:9363" # Prometheus metrics
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - clickhouse-net
+
+  debug:
+    image: nicolaka/netshoot
+    command: sleep infinity
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+
+  clickhouse-node1:
+    image: clickhouse/clickhouse-server:latest
+    container_name: ch-node1
+    hostname: ch-node1
+    depends_on:
+      - clickhouse-keeper
+    volumes:
+      - ./config/clickhouse/node1/config.xml:/etc/clickhouse-server/config.xml:ro
+      - ./config/clickhouse/node1/macros.xml:/etc/clickhouse-server/macros.xml:ro
+      - ./config/clickhouse/node1/users.xml:/etc/clickhouse-server/users.xml:ro
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data:/data:ro
+      - ch1_data:/var/lib/clickhouse
+    ports:
+      - "9001:9000"
+      - "8123:8123"
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=clickhouse_default_password
+
+  clickhouse-node2:
+    image: clickhouse/clickhouse-server:latest
+    container_name: ch-node2
+    hostname: ch-node2
+    depends_on:
+      - clickhouse-keeper
+    volumes:
+      - ./config/clickhouse/node2/config.xml:/etc/clickhouse-server/config.xml:ro
+      - ./config/clickhouse/node2/macros.xml:/etc/clickhouse-server/macros.xml:ro
+      - ./config/clickhouse/node2/users.xml:/etc/clickhouse-server/users.xml:ro
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data:/data:ro
+      - ch2_data:/var/lib/clickhouse
+    ports:
+      - "9002:9000"
+      - "8124:8123"
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=clickhouse_default_password
+
+  clickhouse-node3:
+    image: clickhouse/clickhouse-server:latest
+    container_name: ch-node3
+    hostname: ch-node3
+    depends_on:
+      - clickhouse-keeper
+    volumes:
+      - ./config/clickhouse/node3/config.xml:/etc/clickhouse-server/config.xml:ro
+      - ./config/clickhouse/node3/macros.xml:/etc/clickhouse-server/macros.xml:ro
+      - ./config/clickhouse/node3/users.xml:/etc/clickhouse-server/users.xml:ro
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data:/data:ro
+      - ch3_data:/var/lib/clickhouse
+    ports:
+      - "9003:9000"
+      - "8125:8123"
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+    environment:
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=clickhouse_default_password
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    hostname: grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./grafana/provisioning.yaml:/etc/grafana/provisioning/datasources/clickhouse.yaml:ro
+      - ./grafana/provisioning/preferences/org-preferences.yaml:/etc/grafana/provisioning/preferences/org-preferences.yaml:ro
+    ports:
+      - "3000:3000"
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+  kafka:
+    image: bitnami/kafka:latest
+    container_name: kafka
+    hostname: kafka
+    environment:
+      - KAFKA_CFG_NODE_ID=1
+      - KAFKA_KRAFT_CLUSTER_ID=kraft-cluster-id-123
+      - KAFKA_CFG_PROCESS_ROLES=broker,controller
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka:9093
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+    ports:
+      - "9092:9092"
+    networks:
+      - clickhouse-net
+    restart: unless-stopped
+
+  dev-shell:
+    image: bash:latest
+    container_name: dev-shell
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: ["sleep", "infinity"]
+    networks:
+      - clickhouse-net
+
+volumes:
+  keeper_data:
+  ch1_data:
+  ch2_data:
+  ch3_data:
+  grafana_data: 

@@ -1,0 +1,1436 @@
+2025.07.02 07:41:42.922514 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:43.111479 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:44.125010 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:44.214114 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:45.246505 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:45.317814 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:46.086897 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:46.152595 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:47.302939 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:47.368662 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:49.487782 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:49.566584 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:41:53.211879 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:41:53.289409 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:42:00.078440 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:42:00.136111 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:42:13.287807 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:42:13.342283 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:42:39.358572 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:42:39.414742 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:31.027331 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:31.085345 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:37.909783 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:37.970359 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:38.643242 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:38.704289 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:39.319235 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:39.372770 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:40.121738 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:40.175410 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:41.326158 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:41.384004 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:43.340303 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:43.394632 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:46.950921 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:47.015417 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:43:53.796074 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:43:53.849216 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:44:07.013563 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:44:07.073106 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:44:33.057206 [ 1 ] {} <Warning> Application: Effective user of the process (clickhouse) does not match the owner of the data (root).
+2025.07.02 07:44:33.114932 [ 1 ] {} <Error> Application: Code: 568. DB::Exception: Our server id 1 not found in raft_configuration section. (RAFT_ERROR), Stack trace (when copying this message, always include the lines below):
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x000000000bf9141b
+1. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x00000000060e74ac
+2. DB::Exception::Exception<int const&>(int, FormatStringHelperImpl<std::type_identity<int const&>::type>, int const&) @ 0x0000000006a25d2b
+3. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f4c2a
+4. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+5. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+6. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+7. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+8. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+9. Poco::Util::Application::run() @ 0x0000000012bcfba6
+10. DB::Keeper::run() @ 0x00000000060dc330
+11. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+12. main @ 0x00000000060d9b73
+13. ? @ 0x0000000000029d90
+14. ? @ 0x0000000000029e40
+15. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:45:24.753406 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 07:45:24.755883 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 07:45:25.952610 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 07:45:28.979907 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 07:45:33.862977 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 07:45:33.866941 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 07:45:34.936074 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 07:45:43.686899 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:45:53.796178 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:03.847167 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:13.908040 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:23.976095 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:34.041338 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:43.095750 [ 68 ] {} <Error> ConfigReloader: Error updating configuration from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::getRaftConfigurationDiff(Poco::Util::AbstractConfiguration const&, DB::CoordinationSettings const&) const @ 0x000000000e8facbf
+3. DB::KeeperServer::getRaftConfigurationDiff(Poco::Util::AbstractConfiguration const&) @ 0x000000000e86de13
+4. DB::KeeperDispatcher::updateConfiguration(Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e850036
+5. DB::Context::updateKeeperConfiguration(Poco::Util::AbstractConfiguration const&) @ 0x000000000d2afe41
+6. void std::__function::__policy_invoker<void (Poco::AutoPtr<Poco::Util::AbstractConfiguration>, bool)>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<DB::Keeper::main(std::vector<String, std::allocator<String>> const&)::$_0, void (Poco::AutoPtr<Poco::Util::AbstractConfiguration>, bool)>>(std::__function::__policy_storage const*, Poco::AutoPtr<Poco::Util::AbstractConfiguration>&&, bool) @ 0x00000000060ebba9
+7. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3ce76
+8. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+9. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+10. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+11. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+12. ? @ 0x0000000000094ac3
+13. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 07:46:44.113240 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:46:54.228396 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:47:07.781578 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:08.660082 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:09.621378 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:10.441001 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:11.655845 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:13.858468 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:17.459165 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:24.258105 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:47:37.434190 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:03.485476 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:45.070973 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:45.913091 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:46.851780 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:47.647211 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:48.868194 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:50.898804 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:48:54.557786 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:49:01.377926 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:49:14.575498 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:49:40.576449 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:50:32.222261 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:51:32.615205 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:03.818169 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:04.666133 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:05.537795 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:06.333023 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:07.552830 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:09.571281 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:13.193889 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:20.083081 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:33.364632 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:53:59.380679 [ 1 ] {} <Error> Application: Poco::Exception. Code: 1000, e.code() = 0, Not found: keeper_server.raft_configuration.server.hostname, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::Util::AbstractConfiguration::getString(String const&) const @ 0x0000000012bc70e4
+1. DB::KeeperStateManager::parseServersConfiguration(Poco::Util::AbstractConfiguration const&, bool, bool) const @ 0x000000000e8f2759
+2. DB::KeeperStateManager::KeeperStateManager(int, String const&, String const&, Poco::Util::AbstractConfiguration const&, std::shared_ptr<DB::KeeperContext>) @ 0x000000000e8f674b
+3. DB::KeeperServer::KeeperServer(std::shared_ptr<DB::KeeperConfigurationAndSettings> const&, Poco::Util::AbstractConfiguration const&, ConcurrentBoundedQueue<DB::KeeperResponseForSession>&, ConcurrentBoundedQueue<DB::CreateSnapshotTask>&, std::shared_ptr<DB::KeeperContext>, DB::KeeperSnapshotManagerS3&, std::function<void (unsigned long, DB::KeeperRequestForSession const&)>) @ 0x000000000e860270
+4. DB::KeeperDispatcher::initialize(Poco::Util::AbstractConfiguration const&, bool, bool, std::shared_ptr<DB::Macros const> const&) @ 0x000000000e8476a7
+5. DB::Context::initializeKeeperDispatcher(bool) const @ 0x000000000d2af2f1
+6. DB::Keeper::main(std::vector<String, std::allocator<String>> const&) @ 0x00000000060df620
+7. Poco::Util::Application::run() @ 0x0000000012bcfba6
+8. DB::Keeper::run() @ 0x00000000060dc330
+9. mainEntryClickHouseKeeper(int, char**) @ 0x00000000060dafc2
+10. main @ 0x00000000060d9b73
+11. ? @ 0x0000000000029d90
+12. ? @ 0x0000000000029e40
+13. _start @ 0x000000000515102e
+ (version 25.6.2.5 (official build))
+2025.07.02 07:54:44.042405 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 07:54:44.046141 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 07:54:45.952248 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 07:54:53.913737 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:55:03.986221 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:55:14.042150 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:55:24.127738 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:55:34.188250 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:55:44.039825 [ 45 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 07:55:52.108956 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 07:55:52.111011 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 07:55:53.722868 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 07:56:01.978255 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:56:12.041273 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:56:22.105285 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:56:32.197828 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:56:42.257826 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:56:52.321367 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:02.411701 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:12.475250 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:22.533918 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:32.611392 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:42.671915 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:57:52.739574 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:02.841119 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:12.913078 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:22.972593 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:33.072960 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:43.131037 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:58:53.187635 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:03.311981 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:13.373228 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:23.436556 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:33.572930 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:43.627275 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 07:59:53.687319 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:03.782624 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:13.838376 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:23.967363 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:34.021500 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:44.079989 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:00:54.164280 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:04.232107 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:14.292096 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:24.375556 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:34.435212 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:44.490991 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:01:54.570566 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:04.635769 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:14.702830 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:24.803872 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:34.862013 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:44.935239 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:02:55.054346 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:03:05.121109 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:03:15.182654 [ 30 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:03:22.890566 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:03:32.146148 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:03:32.152663 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:03:33.666533 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:03:41.661940 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:03:51.709489 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:01.798731 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:11.858886 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:21.908468 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:31.985091 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:42.044518 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:04:52.105873 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:02.203646 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:12.263983 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:22.335769 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:32.420545 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:42.492994 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:05:52.552308 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:06:02.669915 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:06:12.731311 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:06:22.792018 [ 28 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:07:31.497550 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:07:31.500414 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:07:32.655617 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:07:40.892607 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:07:50.961439 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:01.058085 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:11.112307 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:21.172266 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:31.265876 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:41.332415 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:08:51.402886 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:01.492333 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:11.573213 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:21.624149 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:31.695511 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:41.755085 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:09:51.820651 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:01.899210 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:11.957563 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:22.024407 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:26.921852 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:28.931518 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:30.939175 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:32.113168 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:32.946188 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:34.952944 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:36.959756 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:38.966917 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:40.976024 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:42.175017 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:10:42.983440 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:44.991191 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:46.998661 [ 69 ] {} <Error> ConfigReloader: Error loading config from '/etc/clickhouse-keeper/keeper_config.xml': Code: 347. DB::Exception: Poco::Exception. Code: 1000, e.code() = 0, SAXParseException: Tag mismatch in '/etc/clickhouse-keeper/keeper_config.xml', line 35 column 6, Stack trace (when copying this message, always include the lines below):
+
+0. Poco::XML::SAXParseException::SAXParseException(String const&, Poco::XML::Locator const&) @ 0x0000000012b17f7e
+1. Poco::XML::ParserEngine::handleError(int) @ 0x0000000012b1c8c9
+2. Poco::XML::ParserEngine::parse(Poco::XML::InputSource*) @ 0x0000000012b1a83a
+3. Poco::XML::SAXParser::parse(String const&) @ 0x0000000012b19ec4
+4. Poco::XML::DOMBuilder::parse(String const&) @ 0x0000000012b0c678
+5. Poco::XML::DOMParser::parse(String const&) @ 0x0000000012b0bee2
+6. DB::ConfigProcessor::parseConfig(String const&, Poco::XML::DOMParser&) @ 0x000000000bf2ac59
+7. DB::ConfigProcessor::processConfig(bool*, zkutil::ZooKeeperNodeCache*, std::shared_ptr<Poco::Event> const&, bool) @ 0x000000000bf2b7ce
+8. DB::ConfigProcessor::loadConfig(bool, bool) @ 0x000000000bf2ffb7
+9. DB::ConfigReloader::reloadIfNewer(bool, bool, bool, bool) @ 0x000000000bf3c707
+10. DB::ConfigReloader::run() @ 0x000000000bf3ee7f
+11. void std::__function::__policy_invoker<void ()>::__call_impl[abi:ne190107]<std::__function::__default_alloc_func<ThreadFromGlobalPoolImpl<true, true>::ThreadFromGlobalPoolImpl<void (DB::ConfigReloader::*)(), DB::ConfigReloader*>(void (DB::ConfigReloader::*&&)(), DB::ConfigReloader*&&)::'lambda'(), void ()>>(std::__function::__policy_storage const*) @ 0x000000000bf40cfd
+12. ThreadPoolImpl<std::thread>::ThreadFromThreadPool::worker() @ 0x000000000c02b192
+13. void* std::__thread_proxy[abi:ne190107]<std::tuple<std::unique_ptr<std::__thread_struct, std::default_delete<std::__thread_struct>>, void (ThreadPoolImpl<std::thread>::ThreadFromThreadPool::*)(), ThreadPoolImpl<std::thread>::ThreadFromThreadPool*>>(void*) @ 0x000000000c031cba
+14. ? @ 0x0000000000094ac3
+15. ? @ 0x0000000000125a04
+ (version 25.6.2.5 (official build)). (CANNOT_LOAD_CONFIG)
+2025.07.02 08:10:47.348455 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:14:35.379358 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:14:35.387332 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:14:37.360064 [ 46 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:14:59.417022 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:15:01.424574 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:15:01.427243 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:15:03.088611 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:16:53.524997 [ 133 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:17:48.277343 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:17:54.117561 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:17:54.120478 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:17:55.782948 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:20:41.993050 [ 45 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:20:52.831341 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:20:52.833437 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:20:54.519309 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:21:16.176215 [ 79 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:26:26.777783 [ 79 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:26:53.968949 [ 41 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:27:04.786078 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:27:04.788609 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:27:06.270636 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:27:26.705595 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 08:31:05.521619 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:31:16.434112 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:31:16.437499 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:31:18.214512 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:32:42.464032 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:32:42.466159 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:32:43.633461 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:39:09.082855 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:39:20.323196 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:39:20.342228 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:39:21.603456 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:43:55.985183 [ 45 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:44:07.577125 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:44:07.580605 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:44:09.259020 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:45:42.912041 [ 44 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:45:59.176898 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:45:59.178095 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:46:00.498768 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:49:14.793858 [ 45 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:49:26.466152 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:49:26.470546 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:49:28.095942 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:49:47.159796 [ 49 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:50:21.875106 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:50:21.877866 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:50:23.125863 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:54:18.410805 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:54:29.754759 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:54:29.757641 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:54:31.449235 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:55:23.886283 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:55:23.887992 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:55:25.306160 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:57:07.640265 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:57:07.649574 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:57:09.020472 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:57:40.129459 [ 44 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 08:57:50.572772 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 08:57:50.575197 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 08:57:52.625115 [ 46 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 08:58:11.663270 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:03:57.565349 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:04:08.329890 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:04:08.332874 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:04:09.488696 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:04:38.894216 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:06:13.866959 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:06:13.875176 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:06:15.521542 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:06:35.592799 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:09:14.886918 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:09:14.890042 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:09:16.668723 [ 49 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:09:36.383298 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:15:11.051294 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:15:11.054290 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:15:12.143954 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:15:32.260787 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:15:49.724115 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:16:00.430621 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:16:00.432206 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:16:02.031191 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:16:30.409732 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:19:04.906556 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:19:04.910020 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:19:06.910993 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:19:46.995952 [ 92 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:22:28.224984 [ 44 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:22:39.556574 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:22:39.559535 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:22:40.911074 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:23:11.148953 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:26:40.369736 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:26:40.376609 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:26:41.991194 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:27:15.099193 [ 85 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:30:20.752399 [ 48 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:30:32.043687 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:30:32.052275 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:30:33.425486 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:31:03.651608 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:34:11.681218 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:34:22.079440 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:34:22.086390 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:34:23.992711 [ 43 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:35:03.324490 [ 92 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:36:31.658638 [ 50 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:36:42.515226 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:36:42.522922 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:36:44.436669 [ 45 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:37:12.230811 [ 80 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:40:41.698155 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:40:52.351710 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:40:52.354357 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:40:53.677158 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:41:24.872881 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:45:40.122688 [ 46 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:45:51.200441 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:45:51.203836 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:45:52.956400 [ 44 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:46:21.081451 [ 29 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:48:04.160204 [ 47 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled
+2025.07.02 09:48:06.451696 [ 1 ] {} <Warning> KeeperLogStore: No logs exists in /var/lib/clickhouse/coordination/logs. It's Ok if it's the first run of clickhouse-keeper.
+2025.07.02 09:48:06.455505 [ 1 ] {} <Warning> KeeperLogStore: Removing all changelogs
+2025.07.02 09:48:08.455782 [ 42 ] {} <Warning> RaftInstance: Election timeout, initiate leader election
+2025.07.02 09:48:39.524595 [ 86 ] {} <Warning> KeeperTCPHandler: Client has not sent any data.
+2025.07.02 09:49:26.549711 [ 51 ] {} <Error> RaftInstance: failed to accept a rpc connection due to error 125, Operation canceled

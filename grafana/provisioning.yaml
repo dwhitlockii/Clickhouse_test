@@ -1,0 +1,17 @@
+apiVersion: 1
+
+datasources:
+  - name: ClickHouse
+    type: grafana-clickhouse-datasource
+    access: proxy
+    url: http://ch-node1:8123
+    database: default
+    user: default
+    password: clickhouse_default_password
+    isDefault: true
+    editable: true
+    # Explicitly set server and port for plugin compatibility
+    jsonData:
+      protocol: "http"
+      server: "ch-node1"
+      port: 8123 

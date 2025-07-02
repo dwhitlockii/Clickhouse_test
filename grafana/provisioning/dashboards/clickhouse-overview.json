@@ -1,0 +1,232 @@
+{
+  "id": null,
+  "uid": "clickhouse-overview",
+  "title": "ClickHouse Cluster Overview",
+  "tags": ["clickhouse"],
+  "timezone": "browser",
+  "schemaVersion": 30,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    // =============================
+    // ClickHouse Cluster Overview Dashboard
+    // =============================
+    // This dashboard provides a comprehensive, production-grade overview of the ClickHouse cluster, Keeper, Kafka, and system health. Each section is clearly marked and queries are robust, efficient, and resilient to missing data.
+    //
+    // Sections:
+    //   1. Cluster Node Health
+    //   2. Keeper (ZooKeeper) Status
+    //   3. Query Performance
+    //   4. Table Growth
+    //   5. Disk Usage
+    //   6. Kafka Ingestion Rate
+    //   7. User Activity
+    //   8. System Resource Usage
+    //   9. Existing Panels (Total Rows, Recent Queries, Active Connections)
+    // =============================
+    // 1. Cluster Node Health
+    {
+      "type": "table",
+      "title": "Cluster Node Health",
+      "description": "Status, version, and uptime for each ClickHouse node in the cluster.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT hostName() AS node, version(), uptime() AS uptime_sec, 'OK' AS status FROM system.one UNION ALL SELECT hostName(), version(), uptime(), 'OK' FROM system.clusters WHERE cluster='your_cluster_name'",
+          "refId": "D"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 12 }
+    },
+    // 2. Keeper (ZooKeeper) Status
+    {
+      "type": "table",
+      "title": "Keeper Status",
+      "description": "Keeper (ZooKeeper) node state, leader/follower, and raft health.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT * FROM system.zookeeper WHERE path = '/' LIMIT 10",
+          "refId": "E"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 18 }
+    },
+    // 3. Query Performance: Top Slow Queries
+    {
+      "type": "table",
+      "title": "Top Slow Queries (24h)",
+      "description": "Top 10 slowest queries in the last 24 hours.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT query_start_time, query, elapsed FROM system.query_log WHERE event_time > now() - INTERVAL 1 DAY AND type = 'QueryFinish' ORDER BY elapsed DESC LIMIT 10",
+          "refId": "F"
+        }
+      ],
+      "gridPos": { "h": 8, "w": 16, "x": 0, "y": 24 }
+    },
+    // 3. Query Performance: Query Errors
+    {
+      "type": "table",
+      "title": "Query Errors (24h)",
+      "description": "Recent query errors in the last 24 hours.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT query_start_time, query, exception, elapsed FROM system.query_log WHERE event_time > now() - INTERVAL 1 DAY AND exception != '' ORDER BY query_start_time DESC LIMIT 10",
+          "refId": "G"
+        }
+      ],
+      "gridPos": { "h": 8, "w": 16, "x": 0, "y": 32 }
+    },
+    // 4. Table Growth: sales_orders
+    {
+      "type": "graph",
+      "title": "sales_orders Row Count Over Time",
+      "description": "Tracks the growth of the sales_orders table over time.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "time_series",
+          "rawSql": "SELECT toStartOfHour(event_time) AS time, count() AS rows FROM default.sales_orders WHERE event_time > now() - INTERVAL 7 DAY GROUP BY time ORDER BY time",
+          "refId": "H"
+        }
+      ],
+      "gridPos": { "h": 8, "w": 16, "x": 0, "y": 40 }
+    },
+    // 5. Disk Usage
+    {
+      "type": "table",
+      "title": "Disk Usage by Table",
+      "description": "Disk space used by each table.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT table, formatReadableSize(sum(bytes_on_disk)) AS disk_used FROM system.parts WHERE active GROUP BY table ORDER BY disk_used DESC",
+          "refId": "I"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 48 }
+    },
+    // 6. Kafka Ingestion Rate (if using Kafka)
+    {
+      "type": "graph",
+      "title": "Kafka Ingestion Rate",
+      "description": "Rows ingested per minute from Kafka (if applicable).",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "time_series",
+          "rawSql": "SELECT toStartOfMinute(event_time) AS time, count() AS rows FROM default.kafka_table WHERE event_time > now() - INTERVAL 1 DAY GROUP BY time ORDER BY time",
+          "refId": "J"
+        }
+      ],
+      "gridPos": { "h": 8, "w": 16, "x": 0, "y": 54 }
+    },
+    // 7. User Activity: Top Users
+    {
+      "type": "table",
+      "title": "Top Users by Query Count (24h)",
+      "description": "Users with the most queries in the last 24 hours.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT initial_user, count() AS queries FROM system.query_log WHERE event_time > now() - INTERVAL 1 DAY GROUP BY initial_user ORDER BY queries DESC LIMIT 10",
+          "refId": "K"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 62 }
+    },
+    // 7. User Activity: Failed Logins
+    {
+      "type": "table",
+      "title": "Recent Failed Logins",
+      "description": "Recent failed login attempts.",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT event_time, initial_user, address, exception FROM system.query_log WHERE event_time > now() - INTERVAL 1 DAY AND exception LIKE '%authentication%' ORDER BY event_time DESC LIMIT 10",
+          "refId": "L"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 68 }
+    },
+    // 8. System Resource Usage (CPU, Memory, Disk I/O)
+    {
+      "type": "table",
+      "title": "System Resource Usage",
+      "description": "CPU, memory, and disk I/O usage from system.metrics (if available).",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT metric, value FROM system.metrics WHERE metric IN ('MemoryTracking', 'RealTimeMicroseconds', 'OSIOWaitMicroseconds', 'OSReadBytes', 'OSWriteBytes')",
+          "refId": "M"
+        }
+      ],
+      "gridPos": { "h": 6, "w": 16, "x": 0, "y": 74 }
+    },
+    // Total Rows in sales_orders
+    {
+      "type": "stat",
+      "title": "Total Rows in sales_orders",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT count() AS rows FROM default.sales_orders",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 4, "w": 8, "x": 0, "y": 0 }
+    },
+    // Recent Queries
+    {
+      "type": "table",
+      "title": "Recent Queries",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT query_start_time, query, elapsed FROM system.query_log ORDER BY query_start_time DESC LIMIT 10",
+          "refId": "B"
+        }
+      ],
+      "gridPos": { "h": 8, "w": 16, "x": 0, "y": 4 }
+    },
+    // Active Connections
+    {
+      "type": "stat",
+      "title": "Active Connections",
+      "datasource": "ClickHouse",
+      "targets": [
+        {
+          "format": "table",
+          "rawSql": "SELECT count() AS active FROM system.processes",
+          "refId": "C"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": { "h": 4, "w": 8, "x": 8, "y": 0 }
+    }
+  ]
+} 

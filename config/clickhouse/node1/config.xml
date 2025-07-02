@@ -1,0 +1,116 @@
+<!--
+  ClickHouse config.xml for node1
+  Place this file at ./config/clickhouse/node1/config.xml
+-->
+<yandex>
+    <!-- Logging -->
+    <logger>
+        <level>information</level>
+        <console>true</console>
+        <log>/var/log/clickhouse-server/node1.log</log>
+        <errorlog>/var/log/clickhouse-server/node1.error.log</errorlog>
+    </logger>
+
+    <!-- Ports -->
+    <tcp_port>9000</tcp_port>
+    <http_port>8123</http_port>
+    <interserver_http_port>9009</interserver_http_port>
+    <listen_host>0.0.0.0</listen_host>
+
+    <!-- Paths -->
+    <path>/var/lib/clickhouse/node1/</path>
+    <tmp_path>/var/lib/clickhouse/node1/tmp/</tmp_path>
+    <user_files_path>/var/lib/clickhouse/node1/user_files/</user_files_path>
+    <format_schema_path>/var/lib/clickhouse/node1/format_schemas/</format_schema_path>
+
+    <!-- Macros (used in sharding, config, etc.) -->
+    <macros>
+        <replica>node1</replica>
+        <shard>1</shard>
+        <cluster>test_cluster</cluster>
+    </macros>
+
+    <!-- Keeper/ZooKeeper -->
+    <zookeeper>
+        <node>
+            <host>keeper</host>
+            <port>2181</port>
+        </node>
+    </zookeeper>
+
+    <!-- Cluster config -->
+    <remote_servers>
+        <test_cluster>
+            <shard>
+                <replica>
+                    <host>ch-node1</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <host>ch-node2</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+            <shard>
+                <replica>
+                    <host>ch-node3</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+        </test_cluster>
+    </remote_servers>
+
+    <!-- Distributed DDL sync -->
+    <distributed_ddl>
+        <path>/clickhouse/task_queue/ddl</path>
+    </distributed_ddl>
+
+    <!-- Users inline instead of separate users.xml -->
+    <users>
+        <admin>
+            <password>admin_strong_password</password>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>default</profile>
+            <quota>default</quota>
+        </admin>
+    </users>
+
+    <!-- Profiles -->
+    <profiles>
+        <default>
+            <max_memory_usage>10000000000</max_memory_usage>
+            <use_uncompressed_cache>0</use_uncompressed_cache>
+            <load_balancing>random</load_balancing>
+        </default>
+    </profiles>
+
+    <!-- Quotas -->
+    <quotas>
+        <default>
+            <interval>
+                <duration>3600</duration>
+                <queries>0</queries>
+                <errors>0</errors>
+                <result_rows>0</result_rows>
+                <read_rows>0</read_rows>
+            </interval>
+        </default>
+    </quotas>
+
+    <!-- Monitoring -->
+    <prometheus>
+        <endpoint>/metrics</endpoint>
+        <port>9363</port>
+        <listen_host>0.0.0.0</listen_host>
+    </prometheus>
+
+    <user_directories>
+        <users_xml>
+            <path>/etc/clickhouse-server/users.xml</path>
+        </users_xml>
+    </user_directories>
+</yandex>

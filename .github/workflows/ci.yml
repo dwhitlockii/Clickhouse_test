@@ -1,0 +1,33 @@
+name: ClickHouse Dev Battlestation CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    services:
+      docker:
+        image: docker:20.10.7-dind
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Docker Compose
+        run: sudo apt-get update && sudo apt-get install -y docker-compose
+      - name: Spin up cluster
+        run: docker-compose up -d
+      - name: Wait for ClickHouse
+        run: |
+          for i in {1..30}; do
+            docker exec ch-node1 clickhouse-client --user=admin --password=admin_strong_password --query "SELECT 1" && break
+            sleep 5
+          done
+      - name: Load data
+        run: ./scripts/dev-load.sh
+      - name: Run validation query
+        run: docker exec ch-node1 clickhouse-client --user=admin --password=admin_strong_password --query "SELECT count(*) FROM default.user_activity"
+      - name: Tear down
+        run: docker-compose down -v 
