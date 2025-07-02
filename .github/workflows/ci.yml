@@ -39,7 +39,7 @@ jobs:
           exit 1
 
       - name: Copy schema file into container
-        run: docker cp ./scripts/01_create_tables_local.sql ch-node1:/tmp/01_create_tables_local.sql
+        run: docker cp ./init/01_create_tables_local.sql ch-node1:/tmp/01_create_tables_local.sql
 
       - name: Create tables
         run: |
